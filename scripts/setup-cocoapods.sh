@@ -2,7 +2,7 @@
 
 
 
-set -euo pipefail
+#set -euo pipefail
 
 
 source_root="$(dirname "$0")/.."
