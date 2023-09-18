@@ -118,7 +118,7 @@ Pod::Spec.new do |s|
   s.watchos.weak_framework  = 'UIKit'
   s.module_map              = 'Realm/Realm.modulemap'
   s.compiler_flags          = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"#{s.version}\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"
-  s.prepare_command         = 'bash scripts/setup-cocoapods.sh'
+  s.prepare_command         = '(/opt/homebrew/bin/dos2unix scripts/setup-cocoapods.sh; bash scripts/setup-cocoapods.sh)'
   s.source_files            = private_header_files + ['Realm/*.{m,mm}']
   s.private_header_files    = private_header_files
   s.header_mappings_dir     = 'include'
